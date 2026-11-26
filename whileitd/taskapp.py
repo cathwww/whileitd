@@ -5,7 +5,13 @@ while True:
          3.
          4.
          5.
-         6.""")
+         6.
+         7.
+         8.
+         10.
+         20.
+         22.
+         31. """)
 
     valik=input("Sisesta ülesande number (1-5) või 'q' väljumiseks: ")
     if valik == '1':
@@ -39,7 +45,7 @@ while True:
                 kogus *= arv
         print("Positiivsete arvude korrutis: ", korrutis)
     elif valik == '4':
-        for i in range(10, 20):
+        for i in range(10, 21):
             print(f"Arvu ruut {i} on {i ** 2}")
     elif valik == '5':
         N = int(input("Sisesta arv N: "))
@@ -88,12 +94,33 @@ while True:
         for i in range(A, B + 1):
             if i % K == 0:
                 print(i)
+    elif valik == '8':
+        for tolli in range(1, 21):
+            cm = tolli * 2.5
+            print(f"{tolli} tolli = {cm} cm")
+    elif valik == '10':
+        for i in range(10):
+            a = float(input(f"Paar {i + 1}. Sisesta esimene arv: "))
+            b = float(input(f"Paar {i + 1}. Sisesta teine ​​arv: "))
+    
+            if a > b:
+                print(f"Suurem: {a}. ")
+            elif b > a:
+                print(f"Suurem: {b}. ")
+            else:
+                print("Arvud on võrdsed.")
     elif valik == '20':
         kogusumma = 0
         for i in range(1, 51):
           if i % 5 == 0 or i % 7 == 0:
             total_sum += i
         print("Arvude summa, mis jagub 5 või 7-ga:", kogusumma)
+    elif valik == '22':
+         kokku = 0
+         for arv in range(100, 201):
+           if arv % 17 == 0:
+             kokku += arv
+             print("Summa:", kokku)
     elif valik == '31':
         K = int(input("Sisesta kotlettide koguarv: "))
         M = int(input("Sisesta, mitu kotletti mahub ühele pannile: "))
@@ -107,3 +134,4 @@ while True:
         break
 else:
     print("Viga")
+
